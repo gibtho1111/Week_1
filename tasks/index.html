@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="style.css">
+<title>Page Title</title>
+</head>
+<style>
+body {
+background-color: lightblue;
+}  
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 50px;background-color: #2196F3;
+  padding:10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+.grid-container1 {
+  display: grid;
+  column-gap: 50px;background-color: #2196F3;
+  padding:10px;
+  align-content: center;
+}
+.grid-container1 > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+
+
+</style>
+
+<body>
+
+<div class="grid-container1">
+<div class="item1">
+<h1>Week 1 tasks</h1>
+<p>This is my week 1 practical portfolio examples .</p>
+
+<img src="resources\earth_map_720p.jpg" alt="World Map">
+
+</div>
+<div class="item2">
+    <h2 style="font-family:verdana;color:red">Pro and Con's of travel</h2>
+</div>
+<div class="item3">
+    <table style="width:100%" >
+        <tr>
+        <th>Pro's</th>
+        <th>Con's</th>
+        </tr>
+        <tr>
+        <td>Meeting new people</td>
+        <td>Sleep loss</td>
+        </tr>
+        <tr>
+        <td>Exploring beautiful new enviroments</td>
+        <td>Loss of regular routines</td>    
+        </tr>
+        <tr>
+        <td>Trying new food's</td>
+        <td>Away from home</td>
+        </tr>
+    </table>
+</div>
+</div> 
+    
+<div class="grid-container">
+    <div class="item1">
+<form>
+  <label for="fplace">Favourite trip location:</label><br>
+  <input type="text" id="fplace" name="fplace"><br>
+  <label for="home">Home town:</label><br>
+  <input type="text" id="home" name="home">
+</form>
+</div>
+<div class="item2">
+<p>How far have you traveled?</p>
+<form>
+  <input type="checkbox" id="" name="option1" value="option">
+  <label for="option1">Interstate</label><br>
+  <input type="checkbox" id="option2" name="voption2" value="option">
+  <label for="vehicle2"> Internationally</label><br>
+  <input type="checkbox" id="option3" name="option3" value="option">
+  <label for="vehicle3">Multiple International trips</label>
+</form>
+    </div>
+</div>
+<footer>
+  <img src="resources\footer_pixel.jpg" style="width:1680px;,height:300px;" alt="picture of a road">
+</footer>
+</body>
+</html>

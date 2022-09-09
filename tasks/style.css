@@ -1,0 +1,27 @@
+
+
+table, th, td {
+border:1px solid black;
+}
+th, td {
+background-color: #96D4D4;
+}
+body {
+background-color: lightblue;
+}
+
+h1 {
+color: white;
+text-align: center;
+}
+
+p {
+font-family: verdana;
+font-size: 20px;
+}
+body {
+font-family: park-lane,serif;
+font-weight: 700;
+font-style: normal;
+}
+    
