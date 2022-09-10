@@ -24,4 +24,7 @@ font-family: park-lane,serif;
 font-weight: 700;
 font-style: normal;
 }
-    
+img {
+    max-width: 100%;
+    display: block;
+}
