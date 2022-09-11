@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="style.css">
+<title>Welcome Traveller</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+body {
+background-color: green;
+}  
+.grid-container1 {
+  display: grid;
+  align-content: center;
+}
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+  align-content: center;
+}
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.center {
+  margin: 0 auto;
+}
+
+
+</style>
+
+<body>
+
+<div class="grid-container1">
+<div class="center">
+<h1>Week 2 tasks</h1>
+<canvas id="myCanvas" width="800px" height="auto"style="border:3px solid black;">
+</canvas>
+<script>
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");
+  ctx.font = "30px Algerian";
+  ctx.fillStyle = "red";
+  ctx.textAlign = "center";
+  ctx.fillText("This is my week 1 practical portfolio examples", canvas.width/2, canvas.height/2);
+</script>
+</div>
+</div>
+<div class="grid-container1">
+  <div class="center">
+<img src="resources\earth_map_720p.jpg" alt="World Map" >
+</div>
+</div>
+
+<div class="container">
+  <iframe class="responsive-iframe" width="1280" height="720" src="https://www.youtube.com/embed/Nlg8zBVAXo4" title="HOW TO PLAN A ROAD TRIP IN AUSTRALIA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<h1>Planning map</h1>
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(-37.77862,144.96944),
+  zoom:4,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?AIzaSyA24UilsH2UjQp0i3NJXsYmqwZvCsgX3eA&callback=myMap"></script>
+
+<footer>
+  <img src="resources\footer_pixel.jpg" style="width:1680px;height:300px;" alt="picture of a road">
+</footer>
+</body>
+</html>
