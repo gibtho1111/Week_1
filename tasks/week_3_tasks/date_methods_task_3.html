@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript new Date()</h2>
+
+<p id="demo"></p>
+
+<script>
+const d = new Date();
+document.getElementById("demo").innerHTML = d;
+</script>
+
+<h2>JavaScript new Date() in different timezone</h2>
+<p>The toUTCString() method converts a date to a UTC string (a date display standard):</p>
+
+<p id="demo1"></p>
+
+<script>
+const a = new Date();
+document.getElementById("demo1").innerHTML = a.toUTCString();
+</script>
+
+<h2>JavaScript toDateString()</h2>
+<p>The toDateString() method converts a date to a date string:</p>
+
+<p id="demo2"></p>
+
+<script>
+const b = new Date();
+document.getElementById("demo2").innerHTML = b.toDateString();
+</script>
+
+<h2>JavaScript toLocaleDateString()</h2>
+
+<p>toLocaleDateString() returns the date (not the time) of a date, as a string, using locale conventions:</p>
+
+<p id="demo3"></p>
+
+<script>
+const c = new Date();
+let text = c.toLocaleDateString();
+document.getElementById("demo3").innerHTML = text;
+</script>
+
+<h2>The getDay() Method</h2>
+
+<p>The getDay() method returns the day of the week (from 0 to 6) of a date.</p>
+
+<p id="demo4"></p>
+
+<script>
+const e = new Date();
+let day = e.getDay()
+document.getElementById("demo4").innerHTML = day;
+</script>
+
+</body>
+</html>

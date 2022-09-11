@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Arrays</h1>
+<h2>The every() Method</h2>
+
+<p>every() returns true if all elements in an array pass a test (provided as a function).</p>
+
+<p id="demo"></p>
+
+<script>
+const ages = [32, 33, 16, 40];
+console.log(ages)
+document.getElementById("demo").innerHTML = ages.every(checkAge);
+
+
+function checkAge(age) {
+  return age > 18;
+}
+console.log("Checking if every age is over 18 for the 'every() Method'")
+console.log(ages.every(checkAge))
+</script>
+
+<h2>The fill() Method</h2>
+
+<p>fill() fills specified elements in an array with a value.</p>
+<p>Fill all array elements with "Kiwi":</p>
+
+<p id="demo1"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log("fruits in the 'fill() Method' Array: " + fruits)
+document.getElementById("demo1").innerHTML = fruits.fill("Spuds");
+console.log("Changing every value in the array to:")
+console.log(fruits.fill("Spuds"))
+</script>
+
+<h2>The filter() Method</h2>
+
+<p>Click "Test" to get every element in the array that has a value above this number:</p>
+
+<p><input type="number" id="numberToCheck" value=""></p>
+<button onclick="myFunction2()">Test</button>
+
+<p id="demo2"></p>
+
+<script>
+const numbers = [32, 33, 12, 40];
+console.log("numbers in the 'filter() Method' array: " + numbers)
+function checkNumber(numbers) {
+  return numbers > document.getElementById("numberToCheck").value;
+}
+
+function myFunction2() {
+  document.getElementById("demo2").innerHTML = numbers.filter(checkNumber);
+}
+</script>
+
+<h2>The find() Method</h2>
+
+<p>find() returns the value of the first element in an array that passes a test (provided by a function):</p>
+
+<p id="demo3"></p>
+
+<script>
+const amounts = [3, 10, 18, 20];
+console.log("Amounts in the 'find() Methods' array: " + amounts)
+document.getElementById("demo3").innerHTML = amounts.find(checkAmounts);
+
+function checkAmounts(amounts) {
+  return amounts > 18;
+}
+console.log("amounts over 18: " + amounts.find(checkAmounts))
+
+</script>
+
+<h2>The forEach() Method</h2>
+
+<p>forEach() calls a function for each element in an array:</p>
+
+<p>Multiply the value of each element with 10:</p>
+
+<p id="demo4"></p>
+
+<script>
+const cost = [65, 44, 12, 4];
+console.log("Numbers in the 'forEach() Method' array: " + cost)
+cost.forEach(myFunction3)
+
+
+document.getElementById("demo4").innerHTML = cost;
+
+function myFunction3(item, index, arr) {
+    return arr[index] = item * 10;
+}
+
+console.log("Numbers in the array after multiplying by 10: " + cost)
+
+</script>
+
+
+
+</body>
+</html>
