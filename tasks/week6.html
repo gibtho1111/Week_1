@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="style.css">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+<div id="inputs">
+    <h1>Tasks for week 6</h1>
+<div>
+    <label for="">Name: </label>
+    <input type="text" v-model="name">
+
+    <br>
+    <label for="">Password: </label>
+    <input type="password" v-model="password">
+    <br>
+    <label for="" v-model="email">Email: </label>
+    <input for="text">
+<div>
+    {{message}}
+</div>
+</div>
+</div>
+
+<div id="checked">
+<input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+<label for="jack">Jack</label>
+<input type="checkbox" id="john" value="John" v-model="checkedNames">
+<label for="john">John</label>
+<input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+<label for="mike">Mike</label>
+<br>
+Checked names: {{checkedNames}}
+</div>
+
+<div id="select">
+<div>
+    <select v-model="selected">
+        <option disabled value="">Please select one</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+      </select>
+      
+      Selected: {{ selected }}
+</div>
+</div>
+<div id="for">
+<div>
+    <select name="" id="" v-model="valuesSelected">
+    <option v-for="num in values" v-bind:value="num">{{num}}</option>
+    </select>
+    Selected: {{ valuesSelected }}
+</div>
+</div>
+
+
+<script src="vue.js"></script>
+</body> 
+
+
+
+</html>

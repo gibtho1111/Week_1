@@ -38,4 +38,55 @@ var app6 = new Vue({
       { games: 'Minesweeper' },
     ],
   }
-})
+});
+
+new Vue({
+  el: "#inputs",
+  data() {
+      return {
+          message: "Thankyou for your information",
+          name: "",
+          password: "",
+          email: "",
+          
+      }
+  },
+methods: {
+
+},
+computed: {
+
+}
+});
+
+new Vue({
+  el: "#checked",
+  data(){
+    return {
+        checkedNames: [],
+    }
+  }
+
+});
+
+//
+new Vue({
+  el: "#select",
+  data(){
+    return {
+        selected: "",
+   
+    }
+  }
+
+});
+new Vue({
+  el: "#for",
+  data(){
+    return {
+        values: [1,2,3,4,5,6],
+        valuesSelected: "",
+    }
+  }
+
+});
