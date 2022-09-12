@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="style.css">
+<title>week 7</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+<div id="app">
+    {{message}}
+    <div class="flex-container">
+    
+    <component-a inline-template @changeparentcount="increaseCount">
+        <div class="flex-item-top">
+        <div class="componenta">
+        {{messageFromComponentA}}
+        <br>
+        <button @click="increaseCount">Increase my number</button>
+        <br>
+        <button @click="$emit('changeparentcount')">Increase my number using emit</button>
+        </div>
+        </div>
+    </component-a>
+
+
+
+    <component-b inline-template>
+        <div class="flex-item-bot">
+    <div class="componentb">
+        {{messageFromComponentB}}
+    </div>
+    </div>
+    </component-b>
+
+    <div style="width: 100%; text-align: center; background-color: yellow;">
+    {{count}}
+    </div>
+
+</div>
+</div>
+
+
+<script>
+
+    Vue.component('component-a' , {
+        data(){
+            return {
+                messageFromComponentA: "This in component A talking"
+            }
+        }
+    })
+
+    Vue.component('component-b' , {
+        data(){
+            return {
+                messageFromComponentB: "This in component B talking"
+            }
+        }
+    })
+
+    new Vue({
+        el: "#app",
+        data(){
+            return {
+                message: "Testing events",
+                count: 0
+            }
+        },
+        methods: {
+            increaseCount() {
+                this.count += 1
+            }
+        }
+
+    })
+</script>
+
+</body>
+
+
+
+</html>

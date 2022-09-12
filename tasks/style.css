@@ -57,7 +57,7 @@ canvas {
   }
   
   .flex-item-bot {
-    background-color: yellow;
+    background-color: lightcoral;
     padding: 10px;
     flex: 50%;
   }
