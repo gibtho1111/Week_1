@@ -5,6 +5,8 @@
 <link rel="stylesheet" href="style.css">
 <title>Page Title</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
 </head>
 <style>
 body {
@@ -24,7 +26,7 @@ background-color: lightblue;
 }
 .grid-container1 {
   display: grid;
-  column-gap: 50px;background-color: #2196F3;
+  column-gap: 50px;background-color: black;
   padding:10px;
   align-content: center;
 }
@@ -42,11 +44,27 @@ background-color: lightblue;
 
 <div class="grid-container1">
 <div class="item1">
-<h1>Week 1 tasks</h1>
-<p>This is my week 1 practical portfolio examples .</p>
+<div class="flex-container">
+<div class="flex-item-top">
+<div id="if_else">
+<h1 v-if="a">Week 1 tasks</h1>
+<h1 v-else>Week 4 tasks</h1>
+</div>
+</div>
+<div class="flex-item-bot">
+<div id="show">
+<p v-show="a">This is my practical portfolio examples .</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="grid-container1">
+<div class="center">
 
 <img src="resources\earth_map_720p.jpg" alt="World Map">
-
+</div>
 </div>
 <div class="item2">
     <h2 style="font-family:verdana;color:red">Pro and Con's of travel</h2>
@@ -94,8 +112,31 @@ background-color: lightblue;
 </form>
     </div>
 </div>
-<footer>
+<div class="flex-container1">
+  <div class="flex-item-left">
+<div id="app3">
+  {{ message }}
+</div>
+</div>
+<div class="flex-item-right">
+<div class="card-body">
+  <div class="row">
+    <div class="col-md-12">
+      <ul>
+        <li v-for="item in items" v-text="item.games"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<script src="vue.js"></script>
+
+  <footer>
   <img src="resources\footer_pixel.jpg" style="width:1680px;height:300px;" alt="picture of a road">
 </footer>
 </body>
 </html>
+
+
