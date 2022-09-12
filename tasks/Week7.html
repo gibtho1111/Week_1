@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="style.css">
+<title>week 7</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+    <h1>{{message}}</h1>
+<div class="flex-container">
+<div class="flex-item-top">
+<div>
+    <component-a></component-a>
+</div>
+</div>
+<div class="flex-item-bot">
+<div class="ComponentB">
+
+    <component-b></component-b>
+</div>
+</div>
+</div>
+</div>
+<script>
+
+    //local component//
+    let ComponentB = {
+        data() {
+            return {
+                ComponentBmessage: "Testing local component b"
+            }
+        },
+        template: '<h1>{{ComponentBmessage}}</h1>'
+    }
+
+    //Global component//
+    Vue.component('component-a',{
+        data() {
+            return {
+                componentmessage: "Testing global component a"
+            }
+        },
+    template: '<h1>{{componentmessage}}</h1>'
+    })
+    
+    new Vue({
+        el: "#app",
+        data() {
+            return {
+                message: "Week 7 components"
+            }
+        },
+        components: {
+            'component-b': ComponentB
+        }
+    })
+</script>
+
+
+
+
+
+
+</body>
+</html>

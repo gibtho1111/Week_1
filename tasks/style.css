@@ -51,13 +51,13 @@ canvas {
   }
   
   .flex-item-top {
-    background-color: black;
+    background-color: green;
     padding: 10px;
     flex: 50%;
   }
   
   .flex-item-bot {
-    background-color: dodgerblue;
+    background-color: yellow;
     padding: 10px;
     flex: 50%;
   }

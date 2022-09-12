@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="style.css">
+<title>week 7</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+    <h1>{{message}}</h1>
+<div class="flex-container">
+    
+<div class="componentprops">
+    <component-props inline-template propsname="Props Value Passed">
+        <div class="flex-item-top">
+            {{message}}
+            <br>
+            {{propsname}}
+        </div>
+    </component-props>
+</div>
+</div>
+</div>
+
+<script>
+
+    Vue.component('component-props',{
+        props: ["propsname"],
+        data() {
+            return {
+                message: "Testing Props component"
+            }
+        }
+    })
+    
+    new Vue({
+        el: "#app",
+        data() {
+            return {
+                message: "Testing props"
+            }
+        }
+    })
+</script>
+
+</body>
+
+
+
+</html>
